@@ -1,0 +1,17 @@
+name: apache-wsgi-app
+summary: "Apache python app server, using mod_wsgi"
+maintainer: Robin Winslow <robin.winslow@canonical.com>
+description: |
+    - Install apache2 with mod_wsgi
+    - Install python dependencies, from requirements.txt or from directory
+    - Install ruby dependencies, from Gemfile or from directory
+    - Extract the project from $b64_project_tgz into $install_path
+    - Serve the app on ports 80 and 443
+categories:
+  - app-servers
+provides:
+  reverseproxy:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container

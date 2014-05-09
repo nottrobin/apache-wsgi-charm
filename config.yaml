@@ -1,0 +1,58 @@
+options:
+    # The project file should always be provided
+    # ===
+    b64_project_tgz:
+        description: A base64 encoded zipped tarball containing the project folder
+
+    # If you want valid HTTPS, you should probably include a certificate
+    # ===
+    b64_ssl_keyfile:
+        default: ""
+        description: A base64 encoded keyfile for SSL - default: self-signed
+
+    b64_ssl_certificate:
+        default: ""
+        description: A base64 encoded certificate for SSL - default: self-signed
+
+    b64_ssl_chainfile:
+        default: ""
+        description: A base64 encoded chainfile for SSL - default: none
+
+    # Everything below here is totall optional
+    # ===
+    apt_packages:
+        default: ""
+        description: Space separated list of apt packages to be installed.
+
+    b64_apache_conf:
+        default: ""
+        description: >
+            An base64 encoded apache virtualhost configuration file for the site
+            If none is provided, a default will be used
+
+    pip_requirements_path:
+        default: "requirements.txt"
+        description: A path (within the project) to 
+
+    pip_dependencies_path:
+        default: "dependencies/python"
+        description: A path (within the project) to python dependencies
+
+    gem_dependencies_path:
+        default: "dependencies/ruby"
+        description: A path (within the project) to ruby dependencies
+
+    install_path:
+        default: "/srv"
+        description: >
+            The path to extract the project folder into
+            The project folder will be created as a timestamp inside this directory
+            E.g.: /srv/2014-05-06-10-55-29
+
+    live_symlink_name:
+        default: "current"
+        description: The name for the live symlink
+
+    wsgi_file_path:
+        default: "app.py"
+        description: The location (within the project) of the WSGI script
