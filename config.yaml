@@ -1,20 +1,20 @@
 options:
     # The project file should always be provided
     # ===
-    b64_project_tgz:
+    project_file:
         description: A base64 encoded zipped tarball containing the project folder
 
     # If you want valid HTTPS, you should probably include a certificate
     # ===
-    b64_ssl_keyfile:
+    ssl_keyfile:
         default: ""
         description: A base64 encoded keyfile for SSL - default: self-signed
 
-    b64_ssl_certificate:
+    ssl_certificate_file:
         default: ""
         description: A base64 encoded certificate for SSL - default: self-signed
 
-    b64_ssl_chainfile:
+    ssl_chainfile_file:
         default: ""
         description: A base64 encoded chainfile for SSL - default: none
 
@@ -48,6 +48,10 @@ options:
             The path to extract the project folder into
             The project folder will be created as a timestamp inside this directory
             E.g.: /srv/2014-05-06-10-55-29
+
+    server_name:
+        default: "*"
+        descript: The servername for inclusion in the Apache configuration
 
     live_symlink_name:
         default: "current"
