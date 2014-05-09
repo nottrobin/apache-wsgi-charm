@@ -1,6 +1,8 @@
 Apache WSGI charm
 ==
 
+*Extremely alpha - probably not working*
+
 This is a [Juju](https://juju.ubuntu.com/) [charm](https://juju.ubuntu.com/charms/) for setting up an [Apache](http://httpd.apache.org/) [mod_wsgi](http://modwsgi.readthedocs.org/en/latest/) server for a basic [Python](https://www.python.org/) [WSGI](http://wsgi.readthedocs.org/en/latest/) app.
 
 Usage
